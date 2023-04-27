@@ -1,0 +1,3 @@
+[submodule "accountabilibot.wiki"]
+	path = accountabilibot.wiki
+	url = https://github.com/jartis/accountabilibot.wiki.git
