@@ -11,6 +11,8 @@
     "@nx/js": "16.0.1",
     "@nx/linter": "16.0.1",
     "@nx/node": "16.0.1",
+    "@nx/vite": "^16.0.1",
+    "@nx/web": "^16.0.1",
     "@nx/webpack": "16.0.1",
     "@nx/workspace": "16.0.1",
     "@types/express": "4.17.13",
