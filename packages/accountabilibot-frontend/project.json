@@ -1,0 +1,72 @@
+{
+  "name": "accountabilibot-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "packages/accountabilibot-frontend/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/packages/accountabilibot-frontend"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "accountabilibot-frontend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "accountabilibot-frontend:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "accountabilibot-frontend:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "accountabilibot-frontend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "accountabilibot-frontend:build:development"
+        },
+        "production": {
+          "buildTarget": "accountabilibot-frontend:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/packages/accountabilibot-frontend"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/packages/accountabilibot-frontend"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/accountabilibot-frontend/**/*.ts"]
+      }
+    }
+  }
+}
