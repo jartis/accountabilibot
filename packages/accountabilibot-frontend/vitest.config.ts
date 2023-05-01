@@ -2,14 +2,16 @@
 import { defineConfig } from 'vite';
 
 import vitePluginSolid from 'vite-plugin-solid';
+import vitePluginSuid from '@suid/vite-plugin';
 import viteTsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
     plugins: [
+        vitePluginSolid(),
+        vitePluginSuid(),
         viteTsConfigPaths({
             root: '../../',
         }),
-        vitePluginSolid(),
     ],
     test: {
         deps: {
