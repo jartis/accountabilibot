@@ -3,10 +3,10 @@
     "npmScope": "accountabilibot",
     "tasksRunnerOptions": {
         "default": {
-            "runner": "nx-cloud",
+            "runner": "nx/tasks-runners/default",
             "options": {
-                "cacheableOperations": ["build", "lint", "test", "e2e"],
-                "accessToken": "ZDI2ZTkzNDItNWIxMy00MTI4LWEwN2MtMjhiMGI4MzM5MjQ4fHJlYWQtb25seQ=="
+                "cacheableOperations": [],
+                "parallel": 5
             }
         }
     },
